@@ -1,16 +1,7 @@
-const express = require('express');
-const app = express();
-require("dotenv").config();
-
-
-app.use(cors());
-app.use(express.urlencoded({ extended: false }));
-
-// parse application/json
-app.use(express.json());
-const sendEmail = require("./sendMail");
+const sendEmail =  require('./sendMail')
 
 import Cors from 'cors'
+
 const cors = Cors({
   methods: ['GET', 'HEAD'],
 })
@@ -39,7 +30,6 @@ async function handler(req, res) {
   }
 
 
-
   const post = ("/api", function async (req, res, next) {
     const date = (new Date).getDate()
     const hour = (new Date).getHours()
@@ -49,14 +39,4 @@ async function handler(req, res) {
 
 });
 
-
 export default handler
-
-
-
-
-
-
-
-
-module.exports=jett
