@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const cors = require('cors')
 require("dotenv").config();
 
 
@@ -11,11 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 const sendEmail = require("./sendMail");
 
-
-const sendEmail =  require('./sendMail')
-
 import Cors from 'cors'
-
 const cors = Cors({
   methods: ['GET', 'HEAD'],
 })
