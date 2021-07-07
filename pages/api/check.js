@@ -30,12 +30,13 @@ async function handler(req, res) {
   }
 
 
-  const post =   async (req, res, next) => {
+  const post =  async (req, res, next)=> {
     const date = (new Date).getDate()
     const hour = (new Date).getHours()
     const minute = (new Date).getMinutes()
  console.log({msg: date+hour+minute })
   res.status(200).json({ msg: date+hour+minute });
-  }
+
+}
 
 export default handler
